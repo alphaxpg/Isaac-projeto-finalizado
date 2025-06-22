@@ -3,7 +3,7 @@
 ## 🌐 Ver / Como Rodar o Projeto
 
 * **No seu navegador (online):**
-    * [No GitHub Pages]([https://mateoquq.github.io/agrinho-2025/](https://alphaxpg.github.io/Isaac-projeto-finalizado/)
+    * [No GitHub Pages](https://alphaxpg.github.io/Isaac-projeto-finalizado/)
     * [No Vercel](https://isaac-projeto-finalizado.vercel.app/)
 * **No seu computador:** 📂 É super fácil! Basta baixar este repositório em seu computador, extrarir os arquivos e abrir o arquivo `index.html`, necessário acesso a internet, devido a eu usar frameworks e bibliotecas online.
 Projeto Agrinho 2025 - Programação
