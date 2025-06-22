@@ -1,0 +1,97 @@
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.high-contrast .card-hover:hover {
+    box-shadow: none;
+    border-color: yellow;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos para alto contraste */
+.high-contrast {
+    background-color: var(--high-contrast-bg) !important;
+    color: var(--high-contrast-text) !important;
+}
+
+.high-contrast .text-primary,
+.high-contrast .high-contrast-text-primary {
+    color: var(--high-contrast-primary) !important;
+}
+
+.high-contrast .bg-primary {
+    background-color: var(--high-contrast-bg) !important;
+    color: var(--high-contrast-primary) !important;
+    border: 2px solid var(--high-contrast-primary) !important;
+}
+
+.high-contrast .bg-accent {
+    background-color: var(--high-contrast-primary) !important;
+    color: var(--high-contrast-bg) !important;
+}
+
+.high-contrast .form-input {
+    background-color: var(--high-contrast-input-bg) !important;
+    color: var(--high-contrast-text) !important;
+    border-color: var(--high-contrast-text) !important;
+}
+
+.high-contrast .form-input:focus {
+    --tw-ring-color: var(--high-contrast-primary) !important; 
+}
+
+.high-contrast .menu-item:hover {
+    color: var(--high-contrast-primary) !important;
+}
+
+.high-contrast .quiz-option:hover {
+    border-color: var(--high-contrast-primary) !important;
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Isaac Habel Lauz Aires">
+    <title>Feira Digital</title>
+    <meta name="description" content="Conectando agricultores e consumidores através de uma plataforma que valoriza a produção local e sustentável.">
+    <meta name="keywords" content="Agrinho, Agrinho-2025, Feira Digital">
+    
+    <meta property="og:title" content="Feira Digital - Produtos Rurais para Todos">
+    <meta property="og:description" content="Projeto que conecta agricultores e consumidores através de uma plataforma que valoriza a produção local e sustentável.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusite.com/">
+    <meta property="og:image" content="https://www.seusite.com/src/assets/images/banner320.jpeg">
+    
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#166534', // verde-800
+                        secondary: '#22c55e', // verde-500
+                        dark: '#14532d', // verde-900
+                        light: '#f0fdf4', // verde-50
+                        accent: '#facc15', // amarelo-400
+                        'high-contrast-bg': '#000000',
+                        'high-contrast-text': '#FFFFFF',
+                        'high-contrast-primary': '#FFFF00',
+                        'high-contrast-input-bg': '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/pages/feira-digital/feira-digital.css">
+    <link rel="stylesheet" href="/assets/css/botao-de-acessibilidade.css">
+</head>
+
+<body>
+
+    <div id="main-content-wrapper">
+
+        <button class="back-to-top fixed right-4 bottom-4 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-800 transition z-50 high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary high-contrast:shadow-none" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition duration-300 high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none" id="navbar">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img alt="Logo" class="h-10 w-10 rounded-full mr-2" src="/assets/img/logo-sem-fundo.png"/>
+                        <a class="text-xl font-bold text-green-600 high-contrast:text-high-contrast-primary" href="/index.html">Feira Digital</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a class="menu-item text-gray-700 hover:text-green-600 font-medium high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary" href="#home">Início</a>
+                        <a class="menu-item text-gray-700 hover:text-green-600 font-medium high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary" href="#about">Sobre</a>
+                        <a class="menu-item text-gray-700 hover:text-green-600 font-medium high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary" href="#services">Produtos</a>
+                        <a class="menu-item text-gray-700 hover:text-green-600 font-medium high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary" href="#contact">Contato</a>
+                    </div>
+                    <button class="md:hidden text-gray-700 focus:outline-none high-contrast:text-high-contrast-text" id="mobileMenuButton">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white shadow-lg high-contrast:bg-high-contrast-bg high-contrast:shadow-none high-contrast:border high-contrast:border-high-contrast-text" id="mobileMenu">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary high-contrast:hover:bg-high-contrast-bg" href="#home">Início</a>
+                    <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary high-contrast:hover:bg-high-contrast-bg" href="#about">Sobre</a>
+                    <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary high-contrast:hover:bg-high-contrast-bg" href="#services">Produtos</a>
+                    <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary high-contrast:hover:bg-high-contrast-bg" href="#contact">Contato</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center parallax" id="home" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/img/FEIRA DIGITAL/imagem-de-fundo.jpg')">
+            <div class="container mx-auto px-6 text-center fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">Feira Digital</h1>
+                <h2 class="text-xl md:text-2xl text-yellow-300 font-medium mb-8 animate-slide-up high-contrast:text-high-contrast-primary">Produtos Rurais para Todos</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10 animate-slide-up">Conectamos você diretamente aos agricultores familiares para comprar produtos frescos e saudáveis, com praticidade e sem intermediários.</p>
+                <div class="flex flex-wrap justify-center gap-4 animate-slide-up">
+                    <a class="bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary" href="#services">Nossos Produtos</a>
+                    <a class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 high-contrast:bg-high-contrast-primary high-contrast:text-high-contrast-bg" href="#about">Como Funciona</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-green-50 high-contrast:bg-high-contrast-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4 high-contrast:text-high-contrast-primary">Benefícios</h2>
+                    <div class="w-24 h-1 bg-yellow-300 mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto high-contrast:text-high-contrast-text">Descubra as vantagens de comprar direto do produtor rural</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-leaf text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Produtos Frescos</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Alimentos colhidos no ponto certo, indo direto da fazenda para sua casa, garantindo máxima qualidade e nutrição.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-hand-holding-usd text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Preço Justo</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Você paga menos e o agricultor ganha mais, eliminando intermediários da cadeia de distribuição.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-truck text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Entrega Direta</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Receba seus produtos em casa ou retire em pontos estratégicos da cidade, com toda comodidade.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-globe-americas text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Sustentável</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Menos transporte, menos desperdício e mais apoio à agricultura familiar e local.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-heart text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Saudável</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Produtos cultivados com mais cuidado e menos agrotóxicos, para uma alimentação mais natural.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="text-green-600 mb-4 high-contrast:text-high-contrast-primary">
+                            <i class="fas fa-users text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 high-contrast:text-high-contrast-primary">Rastreável</h3>
+                        <p class="text-gray-600 high-contrast:text-high-contrast-text">Saiba exatamente quem produziu seus alimentos e como foram cultivados, com total transparência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white section" id="services">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-600 mb-4 animate-slide-up high-contrast:text-high-contrast-primary">Nossos Produtos</h2>
+                    <div class="w-24 h-1 bg-yellow-300 mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto high-contrast:text-high-contrast-text">Conheça as categorias de produtos rurais disponíveis em nossa plataforma</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem1.jpg"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Hortifrúti Fresco</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Frutas, legumes e verduras colhidos diariamente e entregues com todo o frescor.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem2.jpg"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Laticínios Artesanais</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Queijos, iogurtes e manteiga produzidos em pequena escala com técnicas tradicionais.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem3.jpg"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Carnes e Aves</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Carnes de qualidade, criadas sem hormônios e com alimentação natural.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem4.png"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Pães e Grãos</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Pães artesanais e grãos selecionados direto do produtor para sua mesa.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem5.jpg"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Mel e Derivados</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Produtos apícolas puros e naturais, colhidos com cuidado por apicultores locais.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover animate-slide-up high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <img class="w-full h-48 object-cover rounded-md mb-4" src="/assets/img/FEIRA DIGITAL/imagem6.jpg"/>
+                        <h3 class="text-xl font-bold text-green-600 mb-2 high-contrast:text-high-contrast-primary">Produtos Orgânicos</h3>
+                        <p class="text-gray-600 mb-4 high-contrast:text-high-contrast-text">Alimentos cultivados sem agrotóxicos, com certificação de qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-green-50 section" id="about">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                        <img alt="Como funciona" class="rounded-lg shadow-xl w-full h-auto high-contrast:shadow-none high-contrast:border high-contrast:border-high-contrast-text" src="/assets/img/FEIRA DIGITAL/quem-somos.jpg"/>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-6 high-contrast:text-high-contrast-primary">Como Funciona</h2>
+                        <div class="w-24 h-1 bg-yellow-300 mb-6"></div>
+                        <p class="text-gray-600 mb-6 high-contrast:text-high-contrast-text">Nosso objetivo é simplificar o acesso a alimentos frescos e saudáveis, conectando você diretamente aos pequenos agricultores da sua região.</p>
+                        <p class="text-gray-600 mb-6 high-contrast:text-high-contrast-text">Através da nossa plataforma digital, você pode comprar uma variedade de produtos rurais com total comodidade e transparência.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-300 mr-2 mt-1 high-contrast:text-high-contrast-primary"></i>
+                                <span class="text-gray-700 high-contrast:text-high-contrast-text"><strong>Passo 1:</strong> Navegue pela nossa seleção de produtos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-300 mr-2 mt-1 high-contrast:text-high-contrast-primary"></i>
+                                <span class="text-gray-700 high-contrast:text-high-contrast-text"><strong>Passo 2:</strong> Selecione os itens desejados e adicione ao carrinho</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-300 mr-2 mt-1 high-contrast:text-high-contrast-primary"></i>
+                                <span class="text-gray-700 high-contrast:text-high-contrast-text"><strong>Passo 3:</strong> Escolha entre retirar ou receber em casa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-300 mr-2 mt-1 high-contrast:text-high-contrast-primary"></i>
+                                <span class="text-gray-700 high-contrast:text-high-contrast-text"><strong>Passo 4:</strong> Aproveite produtos frescos direto do campo!</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-green-600 text-white high-contrast:bg-high-contrast-primary high-contrast:text-high-contrast-bg">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">500+</div>
+                        <div class="text-sm md:text-base uppercase tracking-wider">Agricultores Parceiros</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">10,000+</div>
+                        <div class="text-sm md:text-base uppercase tracking-wider">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">50+</div>
+                        <div class="text-sm md:text-base uppercase tracking-wider">Cidades Atendidas</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-slow">100%</div>
+                        <div class="text-sm md:text-base uppercase tracking-wider">Satisfação Garantida</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4 high-contrast:text-high-contrast-primary">Depoimentos</h2>
+                    <div class="w-24 h-1 bg-yellow-300 mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto high-contrast:text-high-contrast-text">Veja o que nossos clientes e agricultores dizem sobre a Feira Digital</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-green-50 p-6 rounded-lg shadow-md high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente">
+                            <div>
+                                <h4 class="font-bold high-contrast:text-high-contrast-primary">Maria Silva</h4>
+                                <p class="text-sm text-gray-600 high-contrast:text-high-contrast-text">Consumidora</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 high-contrast:text-high-contrast-text">"Desde que comecei a comprar na Feira Digital, a qualidade dos alimentos da minha casa melhorou muito. Tudo muito fresco e com preços justos!"</p>
+                        <div class="flex mt-3 text-yellow-300">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg shadow-md high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Agricultor">
+                            <div>
+                                <h4 class="font-bold high-contrast:text-high-contrast-primary">José Oliveira</h4>
+                                <p class="text-sm text-gray-600 high-contrast:text-high-contrast-text">Agricultor Parceiro</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 high-contrast:text-high-contrast-text">"A Feira Digital mudou minha vida. Antes eu tinha que vender meu produtos por preços baixos para atravessadores. Agora vendo direto ao consumidor com lucro justo."</p>
+                        <div class="flex mt-3 text-yellow-300">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg shadow-md high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Consumidora">
+                            <div>
+                                <h4 class="font-bold high-contrast:text-high-contrast-primary">Ana Pereira</h4>
+                                <p class="text-sm text-gray-600 high-contrast:text-high-contrast-text">Consumidora</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 high-contrast:text-high-contrast-text">"Adoro saber quem produz meus alimentos! O aplicativo é muito fácil de usar e a entrega sempre chega no prazo. Parabéns pela iniciativa!"</p>
+                        <div class="flex mt-3 text-yellow-300">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-green-50 section high-contrast:bg-high-contrast-bg" id="contact">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                        <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-6 high-contrast:text-high-contrast-primary">Entre em Contato</h2>
+                        <div class="w-24 h-1 bg-yellow-300 mb-6"></div>
+                        <p class="text-gray-600 mb-6 high-contrast:text-high-contrast-text">Quer saber mais sobre nosso projeto? compartilhar suas ideias? Preencha o formulário abaixo.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-yellow-300 text-xl mt-1 mr-3 high-contrast:text-high-contrast-primary"></i>
+                                <p class="text-gray-700 high-contrast:text-high-contrast-text">(42) 98879-1692</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-yellow-300 text-xl mt-1 mr-3 high-contrast:text-high-contrast-primary"></i>
+                                <p class="text-gray-700 high-contrast:text-high-contrast-text">campo.e.cidade.agrinho.2025@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold text-green-600 mb-4 high-contrast:text-high-contrast-primary">Nos siga nas redes sociais</h3>
+                            <div class="flex space-x-4">
+                                <a class="bg-green-600 text-white p-3 rounded-full hover:bg-green-800 transition high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary high-contrast:shadow-none" href="https://www.facebook.com/profile.php?id=61577690451762"><i class="fab fa-facebook-f"></i></a>
+                                <a class="bg-green-600 text-white p-3 rounded-full hover:bg-green-800 transition high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary high-contrast:shadow-none" href="https://www.instagram.com/campo._e_.cidade/"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <form class="bg-white p-8 rounded-lg shadow-md high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none" id="contactForm">
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2 high-contrast:text-high-contrast-text" for="name">Nome completo</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 form-input high-contrast:bg-high-contrast-input-bg high-contrast:text-high-contrast-text high-contrast:border-high-contrast-text high-contrast:focus:ring-high-contrast-primary" id="name" required="" type="text" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2 high-contrast:text-high-contrast-text" for="email">E-mail</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 form-input high-contrast:bg-high-contrast-input-bg high-contrast:text-high-contrast-text high-contrast:border-high-contrast-text high-contrast:focus:ring-high-contrast-primary" id="email" required="" type="email" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2 high-contrast:text-high-contrast-text" for="phone">Telefone</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 form-input high-contrast:bg-high-contrast-input-bg high-contrast:text-high-contrast-text high-contrast:border-high-contrast-text high-contrast:focus:ring-high-contrast-primary" id="phone" type="tel" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2 high-contrast:text-high-contrast-text" for="message">Mensagem</label>
+                                <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 form-input high-contrast:bg-high-contrast-input-bg high-contrast:text-high-contrast-text high-contrast:border-high-contrast-text high-contrast:focus:ring-high-contrast-primary" id="message" rows="4"></textarea>
+                            </div>
+                            <div class="mb-6">
+                                <button class="w-full bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary" type="submit">Enviar Mensagem</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-green-600 text-white py-16 high-contrast:bg-high-contrast-primary high-contrast:text-high-contrast-bg high-contrast:border-t high-contrast:border-high-contrast-text high-contrast:shadow-none">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-1 space-y-4">
+                        <a href="/" class="text-2xl font-bold text-yellow-300 hover:text-yellow-200 transition-colors duration-300 high-contrast:text-high-contrast-bg high-contrast:hover:text-high-contrast-text">Feira Digital</a>
+                        <p class="text-gray-200 max-w-xs high-contrast:text-high-contrast-text">Conectando o campo à cidade através de relações mais justas e sustentáveis.</p>
+                        <div class="flex space-x-4 pt-2">
+                            <a href="https://www.instagram.com/isaac._.aires/" aria-label="Acesse nosso Instagram" class="text-gray-200 hover:text-yellow-300 transition-transform duration-300 transform hover:scale-110 high-contrast:text-high-contrast-bg high-contrast:hover:text-high-contrast-text">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                            <p class="text-gray-200 high-contrast:text-high-contrast-text">Criado Por Isaac Aires</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-yellow-300 mb-4 high-contrast:text-high-contrast-bg">Navegação</h4>
+                            <nav>
+                                <ul class="space-y-3">
+                                    <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/termos-de-uso.html">Termos de Uso</a></li>
+                                    <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/politica-de-privacidade.html">Política de Privacidade</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-yellow-300 mb-4 high-contrast:text-high-contrast-bg">Projetos</h4>
+                            <ul class="space-y-3">
+                                <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/index.html">Agrinho 2025</a></li>
+                                <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/assets/pages/campo-cidade/campo-cidade.html">Do Campo à Cidade</a></li>
+                                <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/assets/pages/tecnologia-campo-cidade/tecnologia-campo-cidade.html">Tecnologia no Campo</a></li>
+                                <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/assets/pages/historias-que-unem/historias-que-unem.html">Histórias que Unem</a></li>
+                                <li><a class="text-gray-200 hover:text-yellow-300 transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-bg" href="/assets/pages/educacao-rural-urbana/educacao-rural-urbana.html">Educação Rural & Urbana</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-yellow-300 mb-4 high-contrast:text-high-contrast-bg">Contato</h4>
+                            <address class="not-italic text-gray-200 space-y-3 high-contrast:text-high-contrast-text">
+                                <p>airessisaac@gmail.com</p>
+                                <p>(42) 98879-1692</p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-green-400 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-200 high-contrast:border-high-contrast-text high-contrast:text-high-contrast-text">
+                    <p class="mb-4 sm:mb-0">© 2025 Feira Digital. Todos os direitos reservados.</p>
+                    <p class="mb-4 sm:mb-0">Deus é Fiel</p>
+                </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50" id="successModal">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-md mx-4 high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 high-contrast:bg-high-contrast-input-bg high-contrast:border high-contrast:border-high-contrast-primary">
+                        <i class="fas fa-check-circle text-green-500 text-3xl high-contrast:text-high-contrast-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 high-contrast:text-high-contrast-primary">Mensagem Enviada!</h3>
+                    <p class="text-gray-600 mb-6 high-contrast:text-high-contrast-text">Obrigado por entrar em contato conosco. Retornaremos o mais breve possível.</p>
+                    <button class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-6 rounded-full transition high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary" id="closeModal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div><div id="accessibility-container">
+        <button id="accessibility-button" aria-label="Abrir menu de acessibilidade">
+            <i class="fas fa-universal-access"></i>
+        </button>
+
+        <div id="accessibility-menu" class="hidden" aria-hidden="true">
+            <h3>Acessibilidade</h3>
+            <div class="menu-scroll-content">
+                <div id="main-options-panel">
+                    <ul>
+                        <li><button id="font-increase" aria-label="Aumentar fonte"><i class="fas fa-plus"></i></button></li>
+                        <li><button id="font-decrease" aria-label="Diminuir fonte"><i class="fas fa-minus"></i></button></li>
+                        <li><button id="daltonism-toggle" aria-label="Opções de daltonismo"><i class="fas fa-palette"></i></button></li>
+                        <li><button id="high-contrast" aria-label="Ativar alto contraste"><i class="fas fa-adjust"></i></button></li>
+                        <li><button id="dark-mode" aria-label="Ativar modo escuro"><i class="fas fa-moon"></i></button></li>
+                        <li><button id="reset-accessibility" aria-label="Resetar configurações de acessibilidade"><i class="fas fa-redo"></i></button></li>
+                    </ul>
+                </div>
+
+                <div id="daltonism-options-panel" class="hidden">
+                    <ul>
+                        <li><button data-filter="deuteranopia" aria-label="Deuteranopia"><i class="fas fa-1"></i></button></li>
+                        <li><button data-filter="protanopia" aria-label="Protanopia"><i class="fas fa-2"></i></button></li>
+                        <li><button data-filter="tritanopia" aria-label="Tritanopia"><i class="fas fa-3"></i></button></li>
+                        <li><button data-filter="none" aria-label="Desativar filtro de daltonismo"><i class="fas fa-times"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/pages/feira-digital/feira-digital.js"></script>
+    <script src="/assets/js/botao-de-acessibilidade.js"></script>
+    <script src="/assets/js/vlibras.js"></script>
+</body>
+</html>

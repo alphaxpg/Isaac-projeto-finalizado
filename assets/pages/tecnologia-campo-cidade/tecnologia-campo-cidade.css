@@ -1,0 +1,129 @@
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.section {
+    scroll-margin-top: 100px;
+}
+
+/* Cores personalizadas */
+.bg-primary {
+    background-color: #2F855A;
+}
+
+.bg-accent {
+    background-color: #ECC94B;
+}
+
+.bg-light {
+    background-color: #F0FFF4;
+}
+
+.bg-dark {
+    background-color: #276749;
+}
+
+.text-primary {
+    color: #2F855A;
+}
+
+.text-accent {
+    color: #ECC94B;
+}
+
+.text-secondary {
+    color: #68D391;
+}
+
+.text-light {
+    color: #F0FFF4;
+}
+
+.text-dark {
+    color: #276749;
+}
+
+.border-primary {
+    border-color: #2F855A;
+}
+
+.border-accent {
+    border-color: #ECC94B;
+}
+
+.border-secondary {
+    border-color: #68D391;
+}
+
+/* Alto contraste */
+.high-contrast .bg-high-contrast-bg {
+    background-color: #000 !important;
+}
+
+.high-contrast .text-high-contrast-primary {
+    color: #FFF !important;
+}
+
+.high-contrast .text-high-contrast-text {
+    color: #FFF !important;
+}
+
+.high-contrast .border-high-contrast-text {
+    border-color: #FFF !important;
+}
+
+.high-contrast .border-high-contrast-primary {
+    border-color: #FF0 !important;
+}
+
+.high-contrast .bg-high-contrast-primary {
+    background-color: #FF0 !important;
+    color: #000 !important;
+}
+
+.high-contrast .bg-high-contrast-input-bg {
+    background-color: #333 !important;
+    color: #FFF !important;
+}

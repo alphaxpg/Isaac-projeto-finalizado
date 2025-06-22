@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Isaac Habel Lauz Aires">
+    <title>Política de Privacidade</title>
+    <meta name="description"
+        content="Conectando agricultores e consumidores através de uma plataforma que valoriza a produção local e sustentável.">
+    <meta name="keywords" content="Agrinho, Agrinho-2025">
+
+    <meta property="og:title" content="Do Campo à Cidade - Festejando a Conexão">
+    <meta property="og:description"
+        content="Projeto que conecta agricultores e consumidores através de uma plataforma que valoriza a produção local e sustentável.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusite.com/">
+    <meta property="og:image" content="https://www.seusite.com/src/assets/images/banner320.jpeg">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/feedback.css">
+    <link rel="stylesheet" href="/assets/css/botao-de-acessibilidade.css">
+</head>
+
+<body>
+
+    <button
+        class="back-to-top fixed right-4 bottom-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-dark transition z-50
+                       high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary high-contrast:shadow-none"
+        id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50" id="successModal">
+        <div
+            class="bg-white p-8 rounded-lg shadow-xl max-w-md mx-4
+                       high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none">
+            <div class="text-center">
+                <div
+                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 high-contrast:bg-high-contrast-input-bg high-contrast:border high-contrast:border-high-contrast-primary">
+                    <i class="fas fa-check-circle text-green-500 text-3xl high-contrast:text-high-contrast-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2 high-contrast:text-high-contrast-primary">Mensagem
+                    Enviada!</h3>
+                <p class="text-gray-600 mb-6 high-contrast:text-high-contrast-text">Obrigado por entrar em contato
+                    conosco. Retornaremos o mais breve possível.</p>
+                <button
+                    class="bg-primary hover:bg-dark text-white font-bold py-2 px-6 rounded-full transition
+                                   high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-2 high-contrast:border-high-contrast-primary"
+                    id="closeModal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="feedback-button" id="openFeedbackModal">Feedback</button>
+
+    <div class="modal-overlay" id="feedbackModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeFeedbackModal">&times;</span>
+            <h3>Deixe seu feedback</h3>
+            <p>Sua opinião é muito importante para nós!</p>
+            <form id="feedbackForm">
+                <textarea name="feedback_message" placeholder="Digite sua mensagem aqui..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-toast">
+        <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <h3>Obrigado!</h3>
+        <p>Seu feedback foi enviado com sucesso.</p>
+    </div>
+
+    <div id="accessibility-container">
+        <button id="accessibility-button" aria-label="Abrir menu de acessibilidade">
+            <i class="fas fa-universal-access"></i>
+        </button>
+
+        <div id="accessibility-menu" class="hidden" aria-hidden="true">
+            <h3>Acessibilidade</h3>
+            <div class="menu-scroll-content">
+                <div id="main-options-panel">
+                    <ul>
+                        <li><button id="font-increase" aria-label="Aumentar fonte"><i class="fas fa-plus"></i></button></li>
+                        <li><button id="font-decrease" aria-label="Diminuir fonte"><i class="fas fa-minus"></i></button></li>
+                        <li><button id="daltonism-toggle" aria-label="Opções de daltonismo"><i class="fas fa-palette"></i></button></li>
+                        <li><button id="high-contrast" aria-label="Ativar alto contraste"><i class="fas fa-adjust"></i></button></li>
+                        <li><button id="dark-mode" aria-label="Ativar modo escuro"><i class="fas fa-moon"></i></button></li>
+                        <li><button id="reset-accessibility" aria-label="Resetar configurações de acessibilidade"><i class="fas fa-redo"></i></button></li>
+                    </ul>
+                </div>
+
+                <div id="daltonism-options-panel" class="hidden">
+                    <ul>
+                        <li><button data-filter="deuteranopia" aria-label="Deuteranopia"><i class="fas fa-1"></i></button></li>
+                        <li><button data-filter="protanopia" aria-label="Protanopia"><i class="fas fa-2"></i></button></li>
+                        <li><button data-filter="tritanopia" aria-label="Tritanopia"><i class="fas fa-3"></i></button></li>
+                        <li><button data-filter="none" aria-label="Desativar filtro de daltonismo"><i class="fas fa-times"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content-wrapper">
+
+        <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition duration-300
+                       high-contrast:bg-high-contrast-bg high-contrast:border high-contrast:border-high-contrast-text high-contrast:shadow-none"
+            id="navbar">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img alt="Logo" class="h-10 w-10 rounded-full mr-2" src="assets/img/logo-sem-fundo.png" />
+                        <a class="text-xl font-bold text-primary high-contrast:text-high-contrast-primary" href="/index.html">Campo
+                            &amp; Cidade: Política de Privacidade</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a class="menu-item text-gray-700 hover:text-primary font-medium high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary"
+                            href="#home">Início</a>
+                    </div>
+                    <button class="md:hidden text-gray-700 focus:outline-none high-contrast:text-high-contrast-text"
+                        id="mobileMenuButton">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white shadow-lg high-contrast:bg-high-contrast-bg high-contrast:shadow-none high-contrast:border high-contrast:border-high-contrast-text"
+                id="mobileMenu">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50
+                                         high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary high-contrast:hover:bg-high-contrast-bg"
+                        href="#home">Início</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center parallax" id="home"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/política\ de\ privacidade.jpg')">
+            <div class="container mx-auto px-6 text-center fade-in">
+                <h1 class="text-4xl md:text-4xl font-bold text-white mb-6 animate-slide-up">Política de Privacidade da Plataforma "Campo & Cidade"</h1>
+                <h2
+                    class="text-xl md:text-2xl text-secondary font-medium mb-8 animate-slide-up high-contrast:text-high-contrast-primary">
+                    Atenção: Esta Política de Privacidade é elaborada para fins de demonstração no contexto do torneio "Agrinho-2025". Ela representa um modelo conceitual de como a privacidade de dados seria tratada em uma plataforma real, e não se aplica à coleta de dados em produção, pois este site não estará online.</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10 animate-slide-up">A sua privacidade é muito importante para nós da "Campo & Cidade". Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais ao utilizar nossa plataforma.
+
+1. Quais informações coletamos?
+Considerando o código HTML fornecido, a plataforma parece coletar informações principalmente através de um formulário de contato. As informações que podemos coletar incluem:
+
+Informações fornecidas por você:
+Dados de Contato: Nome completo, e-mail, telefone (quando você preenche o formulário de contato).
+
+Mensagem: O conteúdo da sua mensagem enviada através do formulário de contato.
+
+Informações de uso:
+Dados de Navegação: Embora o código HTML não implemente diretamente a coleta de dados de navegação para análise (como Google Analytics, por exemplo), é comum que plataformas web coletem informações sobre como os usuários interagem com o site, como páginas visitadas, tempo de permanência, tipo de navegador, sistema operacional e endereço IP. (Observação: Se você planeja implementar ferramentas de análise, isso deve ser explicitamente mencionado aqui e na sua implementação).
+Preferências de Acessibilidade: As opções de alto contraste e aumento de fonte são armazenadas localmente no navegador (via JavaScript, conforme indicado pelo script.js e tailwind-config.js), e não são enviadas ou armazenadas em nossos servidores.
+
+2. Como usamos suas informações?
+As informações coletadas são utilizadas para as seguintes finalidades:
+
+Comunicação: Para responder às suas perguntas e solicitações enviadas através do formulário de contato.
+
+Melhoria da Plataforma: Para entender como a plataforma é utilizada e aprimorar a experiência do usuário. (Se você implementar análises, essa finalidade será mais relevante).
+
+Divulgação e Marketing: Para enviar informações sobre nossos serviços, atualizações e notícias (somente se você tiver dado seu consentimento explícito para isso, o que não é o caso do formulário atual).
+
+3. Compartilhamento de Informações
+A "Campo & Cidade" não vende, aluga ou compartilha suas informações pessoais com terceiros, exceto nas seguintes situações:
+
+Prestadores de Serviços: Podemos compartilhar informações com prestadores de serviços que nos ajudam a operar a plataforma (ex: serviços de hospedagem, e-mail marketing, se aplicável), sempre sob rigorosos acordos de confidencialidade e apenas para os fins específicos para os quais foram contratados.
+Exigência Legal: Podemos divulgar suas informações se exigido por lei, ordem judicial ou para proteger nossos direitos e interesses.
+Consentimento: Com seu consentimento explícito, podemos compartilhar suas informações para outras finalidades.
+
+4. Armazenamento e Segurança das Informações
+Tomamos medidas razoáveis para proteger as informações pessoais que coletamos contra acesso não autorizado, uso indevido, divulgação, alteração ou destruição. No entanto, é importante lembrar que nenhuma transmissão de dados pela internet é 100% segura.
+
+5. Seus Direitos (LGPD)
+De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem os seguintes direitos em relação aos seus dados pessoais:
+
+Acesso: Direito de saber quais dados pessoais temos sobre você.
+
+Retificação: Direito de corrigir dados incompletos, inexatos ou desatualizados.
+
+Eliminação: Direito de solicitar a exclusão de seus dados pessoais, ressalvadas as exceções legais.
+
+Portabilidade: Direito de receber seus dados em formato estruturado e transmitir a outro fornecedor de serviço.
+Oposição: Direito de se opor ao tratamento de seus dados quando não for de acordo com a lei.
+
+Revogação do Consentimento: Direito de retirar o consentimento a qualquer momento, sem afetar a legalidade do tratamento realizado antes da revogação.
+Para exercer seus direitos, entre em contato conosco através do e-mail: airessisaac@gmail.com.
+
+6. Cookies e Tecnologias Semelhantes
+Atualmente, o código HTML fornecido não indica o uso de cookies para rastreamento de usuários ou análise de dados. As funcionalidades de contraste e tamanho de fonte são controladas por JavaScript que manipula classes CSS e possivelmente armazena preferências no localStorage do navegador, o que é uma prática comum para melhorar a usabilidade e não envia dados para o servidor.
+
+(Observação: Se você planeja usar cookies para outras finalidades, como Google Analytics, publicidade ou personalização, esta seção deve ser expandida para descrever quais cookies são usados, suas finalidades e como os usuários podem gerenciá-los.)
+
+7. Alterações nesta Política de Privacidade
+Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão publicadas nesta página com a data da última atualização. Recomendamos que você revise esta política regularmente.
+
+8. Contato
+Se você tiver alguma dúvida sobre esta Política de Privacidade ou sobre nossas práticas de dados, entre em contato conosco através do e-mail: airessisaac@gmail.com.
+
+Pontos de atenção e próximos passos:
+
+Revisão Jurídica: É crucial que um advogado especializado em direito digital revise e adapte estes documentos para garantir total conformidade com a LGPD e outras leis aplicáveis.
+Finalidades de Coleta: Seja o mais transparente possível sobre as finalidades para as quais você coleta dados. Se houver planos futuros de coletar mais dados (ex: cadastro de usuários, sistema de login para agricultores/consumidores, etc.), essas finalidades e os tipos de dados devem ser incluídos na política.
+
+Ferramentas de Análise: Se você for integrar ferramentas como Google Analytics, Hotjar, etc., você precisará detalhar na Política de Privacidade quais dados essas ferramentas coletam e como elas os utilizam, além de incluir uma política de cookies mais robusta.
+Consentimento: Para qualquer coleta de dados pessoais, especialmente se for além do formulário de contato básico, você deve implementar mecanismos para obter o consentimento claro e inequívoco do usuário.</p>
+                <div class="flex flex-wrap justify-center gap-4 animate-slide-up">
+                </div>
+            </div>
+        </section>
+
+        <footer
+            class="bg-primary text-accent py-16 high-contrast:bg-high-contrast-bg high-contrast:text-high-contrast-primary high-contrast:border-t high-contrast:border-high-contrast-text high-contrast:shadow-none">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-1 space-y-4">
+                        <a href="/"
+                            class="text-2xl font-bold text-secondary hover:text-light transition-colors duration-300 high-contrast:text-high-contrast-primary high-contrast:hover:text-high-contrast-text">Campo
+                            &amp; Cidade</a>
+                        <p class="text-gray-300 max-w-xs high-contrast:text-high-contrast-text">Conectando o campo à cidade
+                            através de relações mais justas e sustentáveis.</p>
+                        <div class="flex space-x-4 pt-2">
+                            <a href="https://www.instagram.com/isaac._.aires/" aria-label="Acesse nosso Instagram"
+                                class="text-gray-300 hover:text-secondary transition-transform duration-300 transform hover:scale-110 high-contrast:text-high-contrast-primary high-contrast:hover:text-high-contrast-text">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                            <p>Criado Por Isaac Aires</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-light mb-4 high-contrast:text-high-contrast-primary">
+                                Navegação</h4>
+                            <nav>
+                                <ul class="space-y-3">
+                                    <li><a class="text-gray-300 hover:text-secondary transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary"
+                                            href="/termos de uso.html">Termos de Uso</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-light mb-4 high-contrast:text-high-contrast-primary">
+                                Projetos</h4>
+                            <ul class="space-y-3">
+                                <li><a class="text-gray-300 hover:text-secondary transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary"
+                                        href="/index.html">Agrinho 2025</a></li>
+                                <li><a class="text-gray-300 hover:text-secondary transition high-contrast:text-high-contrast-text high-contrast:hover:text-high-contrast-primary"
+                                        href="/assets/pages/campo-cidade/campo-cidade.html">Do Campo à Cidade</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-light mb-4 high-contrast:text-high-contrast-primary">
+                                Contato</h4>
+                            <address class="not-italic text-gray-300 space-y-3 high-contrast:text-high-contrast-text">
+                                <p>airessisaac@gmail.com</p>
+                                <p>(42) 98879-1692</p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-700 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400 high-contrast:border-high-contrast-text high-contrast:text-high-contrast-text">
+                    <p class="mb-4 sm:mb-0">© 2025 Campo &amp; Cidade. Todos os direitos reservados.</p>
+                    <p class="mb-4 sm:mb-0">Deus é Fiel</p>
+                </div>
+            </div>
+        </footer>
+    </div> <script src="assets/js/script.js"></script>
+    <script src="assets/js/vlibras.js"></script>
+    <script src="/assets/js/botao-de-acessibilidade.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+/* --- Estilos do Botão de Acessibilidade (principal) --- */
+#accessibility-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#accessibility-button {
+    background-color: #28a745; /* Seu verde primário ou um tom visível */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#accessibility-button:hover {
+    background-color: #218838;
+}
+
+#accessibility-button .fas {
+    font-size: 24px;
+    line-height: 1;
+    color: white;
+}
+
+/* --- Estilos do Menu de Acessibilidade --- */
+#accessibility-menu {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    width: 250px;
+    position: fixed;
+    bottom: 85px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) translateZ(0);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    
+    height: 245px; /* Ajuste se necessário para o conteúdo */
+    overflow: hidden;
+
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: flat;
+    -webkit-transform-style: flat;
+}
+
+#accessibility-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateZ(0);
+    display: block;
+}
+
+/* --- Estilos do Título 'Acessibilidade' (h3) --- */
+#accessibility-menu h3 {
+    margin: 0;
+    color: #333;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para o CONTAINER DE ROLAGEM GERAL (.menu-scroll-content) --- */
+.menu-scroll-content {
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* --- Estilos dos PAINÉIS INTERNOS (#main-options-panel, #daltonism-options-panel) --- */
+#main-options-panel,
+#daltonism-options-panel {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Esconde painéis com a classe hidden */
+#main-options-panel.hidden,
+#daltonism-options-panel.hidden {
+    display: none !important;
+}
+
+
+/* --- Estilos dos BOTÕES INTERNOS DOS PAINÉIS (circulares com ícones) --- */
+#main-options-panel ul,
+#daltonism-options-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+#main-options-panel li,
+#daltonism-options-panel li {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-options-panel li button,
+#daltonism-options-panel li button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    cursor: pointer;
+    font-size: 0;
+    color: #333;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+#main-options-panel li button i,
+#daltonism-options-panel li button i {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    line-height: 1;
+}
+
+#main-options-panel li button:hover,
+#daltonism-options-panel li button:hover {
+    background-color: #e9e9e9;
+    border-color: #ccc;
+}
+
+/* Remove a borda de foco e sombra dos botões internos do menu */
+#main-options-panel button:focus-visible,
+#daltonism-options-panel button:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Regra para remover o outline de todos os elementos ao navegar com o mouse */
+/* Se quiser um outline padrão do navegador para elementos focáveis ao usar o teclado,
+   você pode precisar de uma lógica JavaScript mais avançada ou remover esta regra. */
+* {
+    outline: none !important;
+}
+
+
+/* Classes para aplicação das funcionalidades (definidas no JS) - Estas classes serão adicionadas ao <body> */
+
+/* Alto Contraste */
+body.high-contrast {
+    /* **ATENÇÃO**: Estas são apenas regras de demonstração. */
+    /* Você precisará definir aqui as cores para suas classes Tailwind, por exemplo: */
+    /* background-color: black !important; */
+    /* color: yellow !important; */
+
+    /* Exemplo para o Tailwind: */
+    /*
+    .text-primary { color: yellow !important; }
+    .bg-primary { background-color: #333 !important; }
+    .text-gray-700 { color: yellow !important; }
+    */
+}
+
+/* Modo Escuro */
+/* Modo Escuro (Dark Mode) */
+body.dark-mode {
+    /* Cores de fundo e texto principais para o modo escuro */
+    background-color: #1a1a1a !important; /* Um cinza bem escuro para o fundo geral */
+    color: #e0e0e0 !important; /* Texto claro */
+}
+
+/* Ajustes para elementos específicos dentro do modo escuro */
+body.dark-mode .text-primary {
+    color: #90CAF9 !important; /* Um azul claro para o texto primário */
+}
+
+body.dark-mode .text-secondary {
+    color: #FFECB3 !important; /* Um amarelo claro para o texto secundário (accent) */
+}
+
+body.dark-mode .text-gray-600,
+body.dark-mode .text-gray-700 {
+    color: #bdbdbd !important; /* Tons de cinza mais claros para textos gerais */
+}
+
+body.dark-mode .text-gray-400 {
+    color: #9e9e9e !important; /* Tons de cinza mais claros para textos menores */
+}
+
+/* Fundos de seções e cards */
+body.dark-mode .bg-white,
+body.dark-mode .bg-gray-50,
+body.dark-mode .bg-light { /* bg-light foi definido como #f8f8f8 em tailwind-config.js */
+    background-color: #2c2c2c !important; /* Um cinza escuro para cards e seções claras */
+}
+
+body.dark-mode .bg-green-200 { /* Cor de fundo para suas seções principais */
+    background-color: #388e3c !important; /* Um verde escuro ou tom relacionado */
+    color: #ffffff !important; /* Garante que o texto dentro seja branco */
+}
+
+
+/* Navbar no modo escuro */
+body.dark-mode #navbar {
+    background-color: #1c1c1c !important; /* Fundo da navbar mais escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important; /* Sombra mais escura */
+    border-color: #444 !important; /* Borda sutil */
+}
+
+/* Links no modo escuro */
+body.dark-mode a {
+    color: #90CAF9 !important; /* Links em azul claro */
+}
+
+body.dark-mode a.menu-item,
+body.dark-mode a.hover\:text-primary,
+body.dark-mode a.hover\:bg-gray-50 {
+    color: #e0e0e0 !important; /* Itens de menu e links hover */
+}
+
+body.dark-mode a.menu-item:hover,
+body.dark-mode a.hover\:text-primary:hover {
+    color: #90CAF9 !important; /* Cor do link ao passar o mouse */
+}
+
+/* Botões */
+body.dark-mode .bg-primary,
+body.dark-mode #contactForm button[type="submit"],
+body.dark-mode #quizContainer button {
+    background-color: #3f51b5 !important; /* Um azul mais escuro para botões primários */
+    color: white !important;
+    border-color: #3f51b5 !important;
+}
+
+body.dark-mode .bg-accent { /* Botão "Participe" */
+    background-color: #ffa000 !important; /* Um laranja escuro */
+    color: #1a1a1a !important; /* Texto escuro no botão laranja */
+}
+
+body.dark-mode .bg-primary:hover,
+body.dark-mode #contactForm button[type="submit"]:hover,
+body.dark-mode #quizContainer button:hover {
+    background-color: #303f9f !important; /* Azul mais escuro no hover */
+}
+
+body.dark-mode .bg-accent:hover {
+    background-color: #fb8c00 !important; /* Laranja mais escuro no hover */
+}
+
+/* Campos de formulário */
+body.dark-mode .form-input,
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode .form-input::placeholder {
+    color: #888 !important; /* Cor do placeholder no modo escuro */
+}
+
+/* Borda dos cards */
+body.dark-mode .border-gray-200 {
+    border-color: #444 !important;
+}
+
+/* Linhas divisórias (hr) */
+body.dark-mode .w-24.h-1.bg-accent { /* Linha amarela sob títulos */
+    background-color: #FFEB3B !important; /* Um amarelo mais vibrante no modo escuro */
+}
+
+/* Back to Top button */
+body.dark-mode #backToTop {
+    background-color: #3f51b5 !important;
+    color: white !important;
+}
+
+body.dark-mode #backToTop:hover {
+    background-color: #303f9f !important;
+}
+
+/* Rodapé (Footer) */
+body.dark-mode footer.bg-primary {
+    background-color: #1c1c1c !important; /* Fundo do rodapé mais escuro */
+    border-top-color: #444 !important; /* Borda superior do rodapé */
+}
+
+body.dark-mode footer .text-accent {
+    color: #FFEB3B !important; /* Cor do texto "Campo & Cidade" no rodapé */
+}
+
+body.dark-mode footer .text-gray-300,
+body.dark-mode footer .text-gray-400 {
+    color: #bdbdbd !important; /* Textos gerais do rodapé */
+}
+
+body.dark-mode footer a {
+    color: #bdbdbd !important; /* Links do rodapé */
+}
+
+body.dark-mode footer a:hover {
+    color: #90CAF9 !important; /* Links do rodapé no hover */
+}
+
+body.dark-mode footer .border-gray-700 {
+    border-color: #555 !important; /* Borda divisória no rodapé */
+}
+
+/* Efeito Parallax - para escurecer a imagem de fundo ainda mais no dark mode */
+body.dark-mode .parallax {
+    /* Pode ajustar o gradiente para ser mais escuro ou mudar a imagem */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), var(--parallax-image) !important;
+}
+/* Para que o JavaScript possa injetar a imagem original sem sobrecarga */
+.parallax {
+    --parallax-image: url('assets/img/FOTOS PARA O SITE PRINCIPAL/banner1.jpg');
+}
+
+
+/* Desabilitar Animações */
+body.no-animations * {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Filtros para Daltonismo (aplicados ao #main-content-wrapper) */
+body.deuteranopia #main-content-wrapper {
+    filter: url(#deuteranopia);
+    -webkit-filter: url(#deuteranopia);
+}
+
+body.protanopia #main-content-wrapper {
+    filter: url(#protanopia);
+    -webkit-filter: url(#protanopia);
+}
+
+body.tritanopia #main-content-wrapper {
+    filter: url(#tritanopia);
+    -webkit-filter: url(#tritanopia);
+}
+
+/* Garante que o filtro seja removido quando nenhum modo de daltonismo está ativo */
+body:not(.deuteranopia):not(.protanopia):not(.tritanopia) #main-content-wrapper {
+    -webkit-filter: none !important;
+    filter: none !important;
+}
+
+/* Transição para suavizar a aplicação dos filtros */
+#main-content-wrapper {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* ================================================= */
+/* === NOVAS REGRAS PARA O MODO DE ALTO CONTRASTE === */
+/* ================================================= */
+
+body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* --- Fundos de seções, cards e navegação --- */
+body.high-contrast .bg-white,
+body.high-contrast .bg-gray-50,
+body.high-contrast .bg-green-50,
+body.high-contrast .bg-green-200,
+body.high-contrast .bg-light,
+body.high-contrast nav,
+body.high-contrast footer,
+body.high-contrast .modal-content {
+    background-color: #000 !important;
+}
+
+/* --- Textos e Links --- */
+body.high-contrast h1, 
+body.high-contrast h2, 
+body.high-contrast h3, 
+body.high-contrast h4,
+body.high-contrast p, 
+body.high-contrast span, 
+body.high-contrast li,
+body.high-contrast label, 
+body.high-contrast address,
+body.high-contrast div {
+    color: #fff !important;
+}
+
+body.high-contrast .text-primary,
+body.high-contrast .text-secondary,
+body.high-contrast a {
+    color: #ffff00 !important; /* Amarelo brilhante para máxima visibilidade */
+}
+
+/* --- Ícones --- */
+body.high-contrast .fas,
+body.high-contrast .fab {
+    color: #ffff00 !important;
+}
+
+/* --- Botões e Elementos de Destaque --- */
+body.high-contrast .bg-primary,
+body.high-contrast .bg-accent,
+body.high-contrast .feedback-button,
+body.high-contrast button {
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast .bg-primary:hover,
+body.high-contrast .bg-accent:hover,
+body.high-contrast .feedback-button:hover,
+body.high-contrast button:hover {
+    background-color: #ffff00 !important;
+    color: #000 !important;
+}
+
+/* Linha decorativa amarela */
+body.high-contrast .w-24.h-1.bg-accent {
+    background-color: #ffff00 !important;
+}
+
+/* --- Bordas e Formulários --- */
+body.high-contrast .border,
+body.high-contrast .border-gray-200,
+body.high-contrast .border-gray-300,
+body.high-contrast .border-gray-700,
+body.high-contrast .border-green-300 {
+    border-color: #ffff00 !important;
+}
+
+body.high-contrast .shadow-md,
+body.high-contrast .shadow-lg,
+body.high-contrast .shadow-xl {
+    box-shadow: none !important;
+    border: 1px solid #ffff00 !important;
+}
+
+body.high-contrast input,
+body.high-contrast textarea {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+body.high-contrast input::placeholder,
+body.high-contrast textarea::placeholder {
+    color: #ccc !important;
+}
+
+/* --- Imagens e Parallax --- */
+/* Em alto contraste, o ideal é remover imagens que possam atrapalhar a leitura */
+body.high-contrast img {
+    opacity: 0.75;
+    border: 1px solid #fff;
+}
+body.high-contrast .parallax {
+    background-image: none !important; /* Remove a imagem de fundo */
+}
