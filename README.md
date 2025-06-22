@@ -8,10 +8,12 @@
 * **No seu computador:** 📂 É super fácil! Basta baixar este repositório em seu computador, extrarir os arquivos e abrir o arquivo `index.html`, necessário acesso a internet, devido a eu usar frameworks e bibliotecas online.
 Projeto Agrinho 2025 - Programação
     * Aconselho fazer aberturua do projeto pelo Vercel, ou fazer download em sua maquina extrarir e abrir.
-    * O github Pages mesmo depois de horas feito upload do projeto e ativado, continuava com algumas funções sem carregar o projeto por completo,
-    * O githubpages apresenta problemas frequentes de deploy, não sei como estará no momento da avaliação,
+    * O github Pages mesmo depois de horas feito upload do projeto e ativado, continuava com algumas funções sem carregar o projeto por completo.
+    * O githubpages apresenta problemas frequentes de deploy, não sei como estará no momento da avaliação.
     * Reforço novamente a recomendaçãoabrir o projeto pelo deploy do vercel ou download em sua maquina.
 
+
+![Imagem principal do projeto](assets/img/img-final-projeto.png)
 
 🎯 Tema
 
