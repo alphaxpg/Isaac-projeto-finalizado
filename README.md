@@ -46,6 +46,7 @@ O design do site foi pensado para ser limpo e responsivo, adaptando-se a diferen
 
 [x] HTML/CSS 
 [ ] JavaScript com p5.js
+
 Observação: Para a Subcategoria 4, é vedada a utilização de linguagem JavaScript. 
 
 🚀 Como Executar
