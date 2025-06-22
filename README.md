@@ -1,13 +1,17 @@
-Projeto Agrinho 2025 - Programação
+# Projeto Agrinho 2025 - **"Festejando Conexão Campo e Cidade"** 
 
-Deploy: 
-Aconselho fazer aberturua do projeto pelo Vercel, ou fazer download em sua maquina extrarir e abrir.
-Como faço uso de frameworks e bibliotecas online é necessario acesso a internet.
-[Vercel](https://isaac-projeto-finalizado.vercel.app/)
-O github Pages mesmo depois de horas feito upload do projeto e ativado, continuava com algumas funções sem carregar o projeto por completo,
-o githubpages apresenta problemas frequentes de deploy, não sei como estará no momento da avaliação, então reforço novamente a recomendação
-abrir o projeto pelo deploy do vercel ou download em sua maquina.
-[GitHub Pages](https://alphaxpg.github.io/Isaac-projeto-finalizado/)
+## 🌐 Ver / Como Rodar o Projeto
+
+* **No seu navegador (online):**
+    * [No GitHub Pages]([https://mateoquq.github.io/agrinho-2025/](https://alphaxpg.github.io/Isaac-projeto-finalizado/))
+    * [No Vercel](https://isaac-projeto-finalizado.vercel.app/)
+* **No seu computador:** 📂 É super fácil! Basta baixar este repositório em seu computador, extrarir os arquivos e abrir o arquivo `index.html`, necessário acesso a internet, devido a eu usar frameworks e bibliotecas online.
+Projeto Agrinho 2025 - Programação
+    * Aconselho fazer aberturua do projeto pelo Vercel, ou fazer download em sua maquina extrarir e abrir.
+    * O github Pages mesmo depois de horas feito upload do projeto e ativado, continuava com algumas funções sem carregar o projeto por completo,
+    * O githubpages apresenta problemas frequentes de deploy, não sei como estará no momento da avaliação,
+    * Reforço novamente a recomendaçãoabrir o projeto pelo deploy do vercel ou download em sua maquina.
+
 
 🎯 Tema
 
