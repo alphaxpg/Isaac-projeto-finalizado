@@ -25,6 +25,7 @@ NRE: Núcleo Regional de Educação de Ponta Grossa
 👨‍🏫 Professor Orientador
 
 Nome completo: Felipe Caruso
+
 E-mail institucional: Felipe.caruso@escola.pr.gov.br
 
 🧠 Objetivo do Projeto
@@ -32,6 +33,7 @@ E-mail institucional: Felipe.caruso@escola.pr.gov.br
 O objetivo deste projeto é desenvolver um site interativo para fortalecer a conexão entre os produtores rurais de Ponta Grossa e a comunidade urbana. A plataforma busca resolver a dificuldade que muitos consumidores da cidade têm em encontrar e comprar produtos frescos e locais, ao mesmo tempo que oferece aos agricultores uma vitrine digital para divulgar seu trabalho, seus produtos e promover eventos, como feiras e dias de campo. O site "Conexão Agro Ponta Grossa" foi criado para ser um ponto de encontro virtual, celebrando a riqueza da agricultura local e incentivando o consumo consciente e a valorização do homem do campo.
 
 💡 Descrição Geral
+
 Este projeto consiste em um site informativo desenvolvido inteiramente com HTML e CSS, focado na usabilidade e na apresentação clara das informações.  Ele possui as seguintes seções:
 
 Página Inicial: Uma apresentação visual sobre a importância da conexão campo-cidade, com destaques para produtores e produtos da estação.
@@ -41,6 +43,7 @@ Receitas do Campo: Um espaço com receitas que utilizam produtos locais, incenti
 O design do site foi pensado para ser limpo e responsivo, adaptando-se a diferentes tamanhos de tela, como celulares e computadores.
 
 ⚙️ Tecnologias Utilizadas
+
 [x] HTML/CSS 
 [ ] JavaScript com p5.js
 Observação: Para a Subcategoria 4, é vedada a utilização de linguagem JavaScript. 
