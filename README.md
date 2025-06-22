@@ -13,9 +13,13 @@ Este projeto está alinhado à subcategoria direcionada aos estudantes da 2ª e 
 👨‍💻 Estudante
 
 Nome completo: Isaac Habel Lauz Aires
+
 Série/Ano: 3º
+
 Escola: Colégio Estadual Professor Amálio Pinheiro
+
 Município: Ponta Grossa
+
 NRE: Núcleo Regional de Educação de Ponta Grossa
 
 👨‍🏫 Professor Orientador
